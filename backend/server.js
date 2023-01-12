@@ -9,6 +9,7 @@ import connectDB from './config/db.js'
 // routes
 import productRouter from './routes/ProductRoutes.js'
 import userRouter from './routes/UserRoutes.js'
+import orderRouter from './routes/OrderRoutes.js'
 
 dotenv.config()
 
@@ -22,6 +23,7 @@ app.use(cors())
 app.use(express.json())
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
+app.use('/api/orders', orderRouter);
 
 app.use(notFound)
 
